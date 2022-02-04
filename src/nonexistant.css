@@ -17,12 +17,15 @@
     font-style: normal;
 }
 :root{
-    --text-color: rgba(254,254,254,0.7);
+    --text-color: rgba(254, 254, 254, 0.7);
+    --gradient: linear-gradient(0deg, #0003C7 0%, transparent 100%);
     --gold:rgba(196,129,0,1);
     --oldfont: 'UnifontMedium';
+    --icon-color: rgb(251, 251, 251);
     user-select:none;
     scroll-behavior:smooth;
     scroll-snap-type:y proximity;
+    
 }
 .App {
     height:300vh;
@@ -39,7 +42,6 @@
     grid-area: 1 / 1 / 3 / 13;
     display:flex;
     scroll-snap-align: center;
-    background:linear-gradient(180deg, #0e0e0e 0%, #000000 100%);
 }
 .navbar-cont{
         display:flex;
@@ -50,6 +52,9 @@
         align-items:center;
 }
 h1{
+    font-size:2.2rem;
+    margin-block-start:0;
+    margin-block-end: 0;
     cursor:pointer;
     background:linear-gradient(0deg, #0003C7 0%, transparent 100%);
     background-clip:text;
@@ -75,20 +80,23 @@ a{
 }
 .menu-icons{
     margin:auto;
-    width: 90%;
     aspect-ratio: 1/1;
-
+    fill:var(--icon-color);
     transition:transform 0.3s;
+}
+#gradient-attr{
+    height:0;
+    width:0;
 }
 .menu-icons:hover{
     transform:translateY(-0.2rem);
 }
 #introduction-text{
     font-family:var(--oldfont);
-    font-size:3vw;
+    font-size:2.7vw;
     line-height:1;
     letter-spacing:-1px;
-    grid-area: 3 / 3 / 12 / 11;
+    grid-area: 9 / 3 / 17 / 11;
 }
 
 #eyeball{
@@ -98,7 +106,7 @@ a{
     object-fit:cover;
     top:0;
     left:0;
-    grid-area: 12 / 5 / 17 / 9;
+    grid-area: 3 / 3 / 9 / 11;
     transition: opacity 0.3s;
 }
 #eyeball:hover{
@@ -108,13 +116,13 @@ a{
 .area-title{
     display:flex;
     width:100%;
-    height:30%;
+    height:23%;
     justify-content:center;
     align-items:center;
     text-align:center;
-    scroll-snap-align: start;
 }
 h2{
+    font-size:1.8rem;
     min-width:20%;
     margin:auto;
     background:linear-gradient(0deg, blue 0%, transparent 100%);
@@ -123,7 +131,7 @@ h2{
 
 }
 #techs-container{
-    grid-area: 17 / 1 / 33 / 13;
+    grid-area: 16 / 1 / 33 / 13;
 }
 
 .techs{
@@ -133,9 +141,10 @@ h2{
     width:60%;
     flex-wrap:wrap;
     margin:auto;
+    border-radius:50px;
 }
 .tech-logos{
-    width:4rem;
+    width:5rem;
     aspect-ratio: 1/1;
     margin:2rem 2rem;
     transition:transform 0.3s;
@@ -147,13 +156,37 @@ h2{
 
 
 
+::-webkit-scrollbar{
+    background:black;
+    width:25px;
+
+}
+::-webkit-scrollbar-track{
+    background-image:url(./scrollbar/track.svg);
+    background-repeat:no-repeat;
+}
+::-webkit-scrollbar-thumb{
+    background-image:url(./scrollbar/person.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    width:35px;
+    height:35px;
+
+}
+
+
 
 /* MOBILE */
 @media screen and (max-width: 992px) {
-    article>p {
-        font-size: 1.6rem;
+    #eyeball{
+        grid-area: 3 / 1 / 9 / 13;
     }
-    
+    article>p {
+        font-size: 1.4rem;
+    }
+    nav{
+        width:40%;
+    }
     
     .techs {
         width:100%;

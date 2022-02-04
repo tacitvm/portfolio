@@ -1,6 +1,6 @@
 import React from 'react';
 import Tech from './Tech.js';
-// technologie logos
+// skills logos
 import Html from './html.svg';
 import Css from './css.svg';
 import Js from './js.svg';
@@ -9,6 +9,8 @@ import Npm from './npm.svg';
 import Reactjs from './react.svg';
 import Php from './php.svg';
 import Bash from './gnubash.svg';
+import Git from './git.svg';
+import Inkscape from './inkscape.svg';
 
 export default function Techs(props) {
     return (
@@ -21,6 +23,8 @@ export default function Techs(props) {
             <Tech img={Reactjs} altText='REACT JS'/>
             <Tech img={Php} altText='PHP'/>
             <Tech img={Bash} altText='GNU/BASH'/>
+            <Tech img={Git} altText='GIT'/>
+            <Tech img={Inkscape} altText='INKSCAPE'/>
 
 
         </div>

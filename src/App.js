@@ -3,6 +3,8 @@ import Eyeball from './untitled.webm';
 import Navbar from './Navbar/Navbar.js';
 import Techs from './Techs/Techs.js';
 
+
+
 function App() {
 
     const webInfo = {
@@ -11,7 +13,7 @@ function App() {
         gh: 'GITHUB',
         firstpart: 'We, as human beings, are ruled by our senses and one of them is king. Everything we can see is thought as real, and abstractically as knowledge.',
         secondpart: 'As a front-end developer my goal is to make you see what you need and get it done.',
-        techs: 'TECHNOLOGIES',
+        skills: 'SKILLS',
     }
 
   return (
@@ -30,7 +32,7 @@ function App() {
         </video>
         <section id='techs-container'>
             <div className='area-title'>
-                <h2>{webInfo.techs}</h2>
+                <h2>{webInfo.skills}</h2>
             </div>
             <Techs />
         </section>
